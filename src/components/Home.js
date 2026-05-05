@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
@@ -8,18 +9,18 @@ const Home = () => {
         <div className="flex justify-between items-center max-w-7xl mx-auto px-8 h-full">
           <div className="text-2xl font-serif font-semibold tracking-tighter text-zinc-900 dark:text-zinc-50">LUMIÈRE</div>
           <div className="hidden md:flex items-center space-x-12 font-serif text-lg tracking-tight">
-            <a className="text-zinc-900 dark:text-zinc-50 border-b-2 border-zinc-900 dark:border-zinc-50 pb-1 hover:opacity-80 transition-opacity duration-300" href="#">Living</a>
-            <a className="text-stone-500 dark:text-stone-400 hover:text-zinc-800 dark:hover:text-zinc-200 hover:opacity-80 transition-opacity duration-300" href="#">Dining</a>
-            <a className="text-stone-500 dark:text-stone-400 hover:text-zinc-800 dark:hover:text-zinc-200 hover:opacity-80 transition-opacity duration-300" href="#">Office</a>
-            <a className="text-stone-500 dark:text-stone-400 hover:text-zinc-800 dark:hover:text-zinc-200 hover:opacity-80 transition-opacity duration-300" href="#">About</a>
+            <Link className="text-zinc-900 dark:text-zinc-50 border-b-2 border-zinc-900 dark:border-zinc-50 pb-1 hover:opacity-80 transition-opacity duration-300" to="/browse-our-collection">Living</Link>
+            <Link className="text-stone-500 dark:text-stone-400 hover:text-zinc-800 dark:hover:text-zinc-200 hover:opacity-80 transition-opacity duration-300" to="/wooden-dining-table-details">Dining</Link>
+            <Link className="text-stone-500 dark:text-stone-400 hover:text-zinc-800 dark:hover:text-zinc-200 hover:opacity-80 transition-opacity duration-300" to="/seller-dashboard">Office</Link>
+            <Link className="text-stone-500 dark:text-stone-400 hover:text-zinc-800 dark:hover:text-zinc-200 hover:opacity-80 transition-opacity duration-300" to="/timeless-hearth">About</Link>
           </div>
           <div className="flex items-center space-x-6 text-zinc-800 dark:text-zinc-200">
-            <button className="hover:opacity-80 transition-opacity duration-300">
+            <Link to="/your-shopping-cart" className="hover:opacity-80 transition-opacity duration-300">
               <span className="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
-            </button>
-            <button className="hover:opacity-80 transition-opacity duration-300">
+            </Link>
+            <Link to="/checkout-shipping" className="hover:opacity-80 transition-opacity duration-300">
               <span className="material-symbols-outlined" data-icon="person">person</span>
-            </button>
+            </Link>
           </div>
         </div>
       </nav>
@@ -38,12 +39,12 @@ const Home = () => {
               Discover furniture crafted for generations. We blend timeless design with modern durability to create spaces that feel like home.
             </p>
             <div className="flex space-x-4">
-              <button className="bg-primary text-on-primary px-10 py-4 rounded-xl font-body-md font-semibold hover:opacity-90 transition-all duration-300 shadow-lg shadow-primary/20">
+              <Link to="/browse-our-collection" className="bg-primary text-on-primary px-10 py-4 rounded-xl font-body-md font-semibold hover:opacity-90 transition-all duration-300 shadow-lg shadow-primary/20">
                 Shop Now
-              </button>
-              <button className="border border-outline text-primary px-10 py-4 rounded-xl font-body-md font-semibold hover:bg-surface-container transition-all duration-300">
+              </Link>
+              <Link to="/timeless-hearth" className="border border-outline text-primary px-10 py-4 rounded-xl font-body-md font-semibold hover:bg-surface-container transition-all duration-300">
                 View Lookbook
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -150,6 +151,40 @@ const Home = () => {
               <span className="font-body-lg text-body-lg">$450</span>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Page Links Section */}
+      <section className="max-w-7xl mx-auto px-8 py-section-gap">
+        <div className="mb-10 text-center">
+          <span className="font-label-sm text-label-sm text-secondary uppercase tracking-widest mb-4 block">Explore the Site</span>
+          <h2 className="font-headline-lg text-headline-lg">Jump to any page</h2>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+          <Link to="/browse-our-collection" className="rounded-3xl border border-surface-container p-10 bg-white shadow-sm hover:shadow-lg transition">
+            <h3 className="font-headline-md text-headline-md mb-3">Browse Our Collection</h3>
+            <p className="font-body-md text-on-surface-variant">Browse featured furniture and curated pieces in a clean shopping preview.</p>
+          </Link>
+          <Link to="/checkout-shipping" className="rounded-3xl border border-surface-container p-10 bg-white shadow-sm hover:shadow-lg transition">
+            <h3 className="font-headline-md text-headline-md mb-3">Checkout & Shipping</h3>
+            <p className="font-body-md text-on-surface-variant">Continue to the checkout experience and shipping information page.</p>
+          </Link>
+          <Link to="/your-shopping-cart" className="rounded-3xl border border-surface-container p-10 bg-white shadow-sm hover:shadow-lg transition">
+            <h3 className="font-headline-md text-headline-md mb-3">Your Shopping Cart</h3>
+            <p className="font-body-md text-on-surface-variant">Review your active cart items before completing your purchase.</p>
+          </Link>
+          <Link to="/seller-dashboard" className="rounded-3xl border border-surface-container p-10 bg-white shadow-sm hover:shadow-lg transition">
+            <h3 className="font-headline-md text-headline-md mb-3">Seller Dashboard</h3>
+            <p className="font-body-md text-on-surface-variant">View the seller dashboard page and add a new product listing.</p>
+          </Link>
+          <Link to="/timeless-hearth" className="rounded-3xl border border-surface-container p-10 bg-white shadow-sm hover:shadow-lg transition">
+            <h3 className="font-headline-md text-headline-md mb-3">Timeless Hearth</h3>
+            <p className="font-body-md text-on-surface-variant">Explore the warm lifestyle page and brand story section.</p>
+          </Link>
+          <Link to="/wooden-dining-table-details" className="rounded-3xl border border-surface-container p-10 bg-white shadow-sm hover:shadow-lg transition">
+            <h3 className="font-headline-md text-headline-md mb-3">Dining Table Details</h3>
+            <p className="font-body-md text-on-surface-variant">Open the product detail page for the wooden dining table.</p>
+          </Link>
         </div>
       </section>
 
