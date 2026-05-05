@@ -103,7 +103,7 @@ const CheckoutShippingInformation = () => (
             <div className="space-y-6 mb-8">
               <div className="flex gap-4">
                 <div className="w-24 h-24 bg-surface-container-low rounded-lg overflow-hidden shrink-0">
-                  <img className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9Wg23yKcmC9DJ5j-jM5E5l8Oprf58aaNHDL-gdgfrhn0m2In3nuIT5dyWRrsrzewnEcnHOZPGVnYHiDPH5U7lTlBgrkYGwSkuVLy17mdj9B1EW1TVZlFxggowLGrb5B-DSIQyhiFiaZJ7_tvyuIJJzR58CvATlkI_DggPxzVSMbwSGdbzFDZdJmgbaothR26nUUG03CgSn1_lnynb4eVNIkgNURx0yBvYbDTiCWzo5yG_Mw72KkmMqAIVbuZrHnbeRUk5_zw-crs8" alt="Chair"/>
+                  <img className="w-full h-full object-cover" src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?auto=format&fit=crop&w=300&q=80" alt="Bastille lounge chair" loading="lazy" />
                 </div>
                 <div className="flex flex-col justify-center flex-1">
                   <h3 className="font-body-md font-semibold">Bastille Lounge Chair</h3>
@@ -113,7 +113,7 @@ const CheckoutShippingInformation = () => (
               </div>
               <div className="flex gap-4">
                 <div className="w-24 h-24 bg-surface-container-low rounded-lg overflow-hidden shrink-0">
-                  <img className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCm94vGlReLWhJRFZM7R1x6j1cfCS-aOncpQl7lkOY8O6-fKedR6G3gljSz6XCVoSyDyfcXqtIoNmEME3UKZoSLd_bLKeLxM9dNasixPEIYoHyaroRVVDi-ETOVIMC3ToxOas6Ajftk-JoqBuTKUeBYIRxxN6RkLCTHEedJLD6hsaX5Om0KRxl5veRj3M8-jfZZ4679UZs8FlX9mR-T6DG3inhruneJD3SEB0VYZoXneHUfe-kyuMTArPCYlH2JHKlUCW1xHE4wkcuB" alt="Table"/>
+                  <img className="w-full h-full object-cover" src="https://images.unsplash.com/photo-1532372576444-dda954194ad0?auto=format&fit=crop&w=300&q=80" alt="Ether side table" loading="lazy" />
                 </div>
                 <div className="flex flex-col justify-center flex-1">
                   <h3 className="font-body-md font-semibold">Ether Side Table</h3>
@@ -153,10 +153,10 @@ const CheckoutShippingInformation = () => (
           <p className="font-sans text-xs tracking-wide text-stone-500">© 2024 Lumière Furniture. All rights reserved.</p>
         </div>
         <div className="flex gap-8">
-          <a className="font-sans text-xs tracking-wide text-stone-400 hover:text-zinc-900 transition-colors" href="#">Sustainability</a>
-          <a className="font-sans text-xs tracking-wide text-stone-400 hover:text-zinc-900 transition-colors" href="#">Material Care</a>
-          <a className="font-sans text-xs tracking-wide text-stone-400 hover:text-zinc-900 transition-colors" href="#">Shipping &amp; Returns</a>
-          <a className="font-sans text-xs tracking-wide text-stone-400 hover:text-zinc-900 transition-colors" href="#">Privacy Policy</a>
+          <button type="button" className="font-sans text-xs tracking-wide text-stone-400 hover:text-zinc-900 transition-colors">Sustainability</button>
+          <button type="button" className="font-sans text-xs tracking-wide text-stone-400 hover:text-zinc-900 transition-colors">Material Care</button>
+          <button type="button" className="font-sans text-xs tracking-wide text-stone-400 hover:text-zinc-900 transition-colors">Shipping &amp; Returns</button>
+          <button type="button" className="font-sans text-xs tracking-wide text-stone-400 hover:text-zinc-900 transition-colors">Privacy Policy</button>
         </div>
       </div>
     </footer>

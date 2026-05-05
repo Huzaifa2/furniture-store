@@ -33,29 +33,32 @@ const WoodenDiningTableDetails = () => {
         </nav>
       </header>
 
-      <main className="pt-32 max-w-7xl mx-auto px-8 pb-20">
+      <main className="pt-32 max-w-7xl mx-auto px-8 pb-32 lg:pb-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
           {/* Images Section */}
           <section className="lg:col-span-7 space-y-6">
-            <div className="aspect-[4/5] bg-surface-container overflow-hidden rounded-xl shadow-sm">
-              <img 
-                className="w-full h-full object-cover" 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcjGOSg11_DwOSDpbGAUUiSOCKuT2o6IRgptnW3TSsqqkfVai7o6OhbfH2TyIit029j65tLFraZmzI_mdbNFMCzci36S_io2PXUQOExwmsBgBrEGekurCg9UF_9mikg9GdXOziJb8pIOxeXHsh1M4uxSqBy_PtPN73l0AhB0kG66PQYOwLBuCOpPjK5gq5eUC5Dyiapgz6DUORRRSsHR1v-9K3s7U_WNr_cErwO2ijJlOmLWBlt5sHZH6mHSrOZVbER7Q4fREG74YV"
-                alt="Artisan Solid Oak Dining Table"
-              />
+            <div className="aspect-[4/5] bg-surface-container overflow-hidden rounded-2xl shadow-sm tilt-card">
+              <div className="tilt-card-inner w-full h-full">
+                <img
+                  className="tilt-card-img w-full h-full object-cover"
+                  src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=1400&q=80"
+                  alt="Artisan solid oak dining table in a sunlit room"
+                  loading="eager"
+                />
+              </div>
             </div>
             <div className="grid grid-cols-4 gap-4">
               <div className="aspect-square bg-surface-container rounded-lg overflow-hidden border border-stone-200 cursor-pointer hover:shadow-md transition-shadow">
-                <img className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDp_1_Ef4TbYWk1QoyNEFmIRtAoHe0YZbIfHd1d4nz-kElaoKNJ2vnRlJK_8ZvMU9Wvnc4T7y3yRFKhIA9PUPM0Ujr09F7SpqSl6fY3hMO4nC2WRVenG3UjkdivOx8bCmdmL9ekmRIsrdaTRkskgA44Jd9aqNG4KpaavKS3-u9RD022aD6N00AEiqGzYE_kSZI3XRvWePhn0x-kgvdpo_j5ePCS8Kx6JS8XqHfUs8PL5Bv5fvZQxFLjH5yY99P0KS048_6QgnD6kakt" alt="Wood grain detail" />
+                <img className="w-full h-full object-cover" src="https://images.unsplash.com/photo-1517705008128-361805f42e86?auto=format&fit=crop&w=400&q=80" alt="Oak wood grain detail" loading="lazy" />
               </div>
               <div className="aspect-square bg-surface-container rounded-lg overflow-hidden border border-stone-200 cursor-pointer hover:shadow-md transition-shadow">
-                <img className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1Li55fktOkfygxIsaFA6O8RNEEs4cV-dDuqNuOWjvatqn7aW5K6ymLG0ocwb3l50NVJoRdr_-Cu3gB4GwpRdqdNdW28ZVlwItrOuO5GTy4SkmZAlfwyRrp5YkUPWkccB0DPGOkev3C8Ll9brQPs_fIbkgYsMDNRZzcLrwsd8AE5FsDIalj9b7hD0FLI744kTSAyNi1oMEaC3bctlaZSv4ISebfnRj9Z8H7aWL1P87AzUaQJUOUqsazqzrPOURfz-eFtqkjmaqWNW8" alt="Joinery detail" />
+                <img className="w-full h-full object-cover" src="https://images.unsplash.com/photo-1538688525198-9b88f6f53126?auto=format&fit=crop&w=400&q=80" alt="Joinery detail" loading="lazy" />
               </div>
               <div className="aspect-square bg-surface-container rounded-lg overflow-hidden border border-stone-200 cursor-pointer hover:shadow-md transition-shadow">
-                <img className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8-GPNgeYbbpmRsGpZfufXcI1VuBo3e9nJGNIx5YKTI20n7IVLGcN0fYB45C87mnKQd6HjOojvAUJ68Hnzyw74NuESOUZm8sZPEdooqQh0VII4jMQhvP_m2z11TZ9WCCnmbcsf0Z_Rq6r_lDi8jzeOv1doar-vNpAzUVpEWXnjC82qLp8RzrMdS9vHH01-fx--2KC8nnjJQJ2G9iFtkHJsbS_IXfkZ2sm6_6GhcwWP34Y3HfYOHXZiTEKaE4AIa0MHMFYBVHv0ZJse" alt="Table setting" />
+                <img className="w-full h-full object-cover" src="https://images.unsplash.com/photo-1577140917170-285929fb55b7?auto=format&fit=crop&w=400&q=80" alt="Dining table setting" loading="lazy" />
               </div>
               <div className="aspect-square bg-surface-container rounded-lg overflow-hidden border border-stone-200 cursor-pointer hover:shadow-md transition-shadow relative">
-                <img className="w-full h-full object-cover opacity-50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWkurWjDIeCQedr7WNKc6Hri_yFRmM_HR-ty72MsqDZzxOe9MXzf_nXy9dRS5vrDZ8rkAsrastJEmdzSBj3S-i805RShabZPytlOLgwCsmPB51JmYoiz6B5qFegnd_ROD5PeM7pT_juZDF6hMrwb5JALAXcrkofmE5adw1KLqmf8Tqgn89sbuWYI-u4y5i59t6oXk0c5Wz0bxagEGkhSNT5GmD3ypIOvnPKe5BCQF-x6MtqBtYoyGQi6B9GrZ3MWCTd5XnZnboyrrs" alt="More photos" />
+                <img className="w-full h-full object-cover opacity-50" src="https://images.unsplash.com/photo-1615875605825-5eb9bb5d52ac?auto=format&fit=crop&w=400&q=80" alt="More angles of the table" loading="lazy" />
                 <div className="absolute inset-0 flex items-center justify-center text-label-sm font-label-sm">+4 More</div>
               </div>
             </div>
@@ -229,14 +232,14 @@ const WoodenDiningTableDetails = () => {
           <h2 className="font-display-xl text-headline-lg mb-12 text-center">Complete the look</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
             {[
-              { title: 'Woven Nordic Chair', price: '$480.00', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBDXmu1xj-jQagCsSTiNHa4bfQw_DabP52GITPRmYC5p8T_zj9Md-fpqy5pM0upK_uGN38g0ryetMd9vjTNqA410bp2pHka7aCiAHtv3UHX9KUboBali6iNn0O8W-weReQabaaGQLxKgDOWcc-prVm9AKr3BCoQrBk6VVQd3_wcD-o7I7ff5MSy5zxrZdeb5um5DvAzFc51FnubMm7xg3UN5iedTW21Dc7kp4m-8ySLFjt2uUny3GarHY8WvaASVR0bs7tgdDE33_Ra' },
-              { title: 'Eclipse Pendant Light', price: '$320.00', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCNdWi9wRjv4IeBpMB9wCjZxYb6ixNYkJQdCeoQQycKViI4z2c63HfXwtnjCLwneIxyNd4ZCL03CVfl40kE04KGKhotpGKJMcP0F0yrTSYoBGzwk6IdKnXfpQtWA2hhSJakNy-T5AqnqNDF97gNZ3dEj97Js25pgnYFtxf8hgWlESdGLQgBXASfkpdvJ2LjnmWYiQUu1qQLe03kBk9kjBuqDluFZ8H7aWL1P87AzUaQJUOUqsazqzrPOURfz-eFtqkjmaqWNW8' },
-              { title: 'Tidal Ceramic Vase', price: '$125.00', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAvE8O0fSyHWEwuNplPLSX8r6FOEbWtBZbTBL3aot6s6vm4uG_np6c8VsW21JfTJCjVY2q1S8wSGXXfvIEy_iOvBzNKBE8yJmyHo1mhC8nuoLdhpjS0tvXUX92hNoIgS8EwWziyxYrD8RjMesGFjqHzXhH_vxS3KdsJfFRFciFC41i5bVMNkA4ftV1zYNU-OdAsBh9JDQnYBQRSWKDdFQvGHtH8xWeOTpnayywZEv2V12Szks7gtYfzHY4ECpQTiCVZ_6VGHBUImKCv' },
-              { title: 'Desert Loom Rug', price: '$890.00', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAsjrEla1Aai4J_ZbOPX2ftpEx_hdCA4OJDqbv0eARuismoOfn0flEC2Mw6CQfg6oHjm6VDAEmExR11BGWNk31e3KSeTCTCnkSgAi1-8gaWa2vK5OD8G_qPadbosrp8ZwbaYCBCggiSlj_ioyrMLIsQXMcE9YOef6JA_E4EW7Dkm_Wn6G398hnDOM_aOfzLOgkZoAxuNFiRir4_0A2TL3Ld4ZgczDTaX4uRRvLaDcQMlyzG2Q_3YS0yP8a5Z2F0RM7dDgLgfrCvIKnL' }
+              { title: 'Woven Nordic Chair', price: '$480.00', img: 'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?auto=format&fit=crop&w=600&q=80' },
+              { title: 'Eclipse Pendant Light', price: '$320.00', img: 'https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=600&q=80' },
+              { title: 'Tidal Ceramic Vase', price: '$125.00', img: 'https://images.unsplash.com/photo-1578500494198-246f612d3b3d?auto=format&fit=crop&w=600&q=80' },
+              { title: 'Desert Loom Rug', price: '$890.00', img: 'https://images.unsplash.com/photo-1600166898405-da9535204843?auto=format&fit=crop&w=600&q=80' }
             ].map((product, idx) => (
-              <div key={idx} className="group cursor-pointer">
-                <div className="aspect-[3/4] bg-surface-container rounded-xl overflow-hidden mb-4 relative">
-                  <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src={product.img} alt={product.title} />
+              <div key={idx} className="group cursor-pointer tilt-card">
+                <div className="tilt-card-inner aspect-[3/4] bg-surface-container rounded-2xl overflow-hidden mb-4 relative">
+                  <img className="tilt-card-img w-full h-full object-cover" src={product.img} alt={product.title} loading="lazy" />
                   <button className="absolute bottom-4 right-4 bg-white/90 backdrop-blur p-2 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
                     <span className="material-symbols-outlined">add</span>
                   </button>
@@ -249,15 +252,40 @@ const WoodenDiningTableDetails = () => {
         </section>
       </main>
 
+      {/* Mobile sticky add-to-cart */}
+      <div className="lg:hidden fixed bottom-0 inset-x-0 z-40 bg-white/95 backdrop-blur-md border-t border-stone-200 shadow-[0_-4px_20px_-5px_rgba(44,44,44,0.1)]">
+        <div className="max-w-7xl mx-auto px-4 py-3 flex items-center gap-3">
+          <div className="flex flex-col">
+            <span className="text-[10px] uppercase tracking-widest text-stone-400">Artisan Solid Oak</span>
+            <span className="font-headline-md text-lg leading-none text-primary">$2,450</span>
+          </div>
+          <div className="flex items-center border border-stone-200 rounded-xl ml-auto">
+            <button onClick={() => setQuantity(Math.max(1, quantity - 1))} className="px-2 py-2 hover:opacity-50">
+              <span className="material-symbols-outlined text-base">remove</span>
+            </button>
+            <span className="px-2 font-body-md font-semibold w-6 text-center text-sm">{quantity}</span>
+            <button onClick={() => setQuantity(quantity + 1)} className="px-2 py-2 hover:opacity-50">
+              <span className="material-symbols-outlined text-base">add</span>
+            </button>
+          </div>
+          <button
+            onClick={handleAddToCart}
+            className="bg-primary text-on-primary font-label-sm px-5 py-3 rounded-xl text-xs uppercase tracking-widest"
+          >
+            Add to cart
+          </button>
+        </div>
+      </div>
+
       {/* Footer */}
       <footer className="w-full border-t border-stone-200 mt-20 bg-stone-50">
         <div className="max-w-7xl mx-auto px-8 py-12 flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="font-serif text-lg text-zinc-800">LUMIÈRE</div>
           <div className="flex gap-8">
-            <a className="font-sans text-xs tracking-wide text-stone-400 hover:text-zinc-900 transition-colors" href="#">Sustainability</a>
-            <a className="font-sans text-xs tracking-wide text-stone-400 hover:text-zinc-900 transition-colors" href="#">Material Care</a>
-            <a className="font-sans text-xs tracking-wide text-stone-400 hover:text-zinc-900 transition-colors" href="#">Shipping & Returns</a>
-            <a className="font-sans text-xs tracking-wide text-stone-400 hover:text-zinc-900 transition-colors" href="#">Privacy Policy</a>
+            <button type="button" className="font-sans text-xs tracking-wide text-stone-400 hover:text-zinc-900 transition-colors">Sustainability</button>
+            <button type="button" className="font-sans text-xs tracking-wide text-stone-400 hover:text-zinc-900 transition-colors">Material Care</button>
+            <button type="button" className="font-sans text-xs tracking-wide text-stone-400 hover:text-zinc-900 transition-colors">Shipping &amp; Returns</button>
+            <button type="button" className="font-sans text-xs tracking-wide text-stone-400 hover:text-zinc-900 transition-colors">Privacy Policy</button>
           </div>
           <p className="font-sans text-xs tracking-wide text-stone-500">© 2024 Lumière Furniture. All rights reserved.</p>
         </div>

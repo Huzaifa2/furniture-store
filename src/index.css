@@ -20,3 +20,87 @@ body {
   background-color: #fbf9f9;
   color: #1b1c1c;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes lumiere-rise {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  animation: lumiere-rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.reveal-delay-1 { animation-delay: 0.12s; }
+.reveal-delay-2 { animation-delay: 0.24s; }
+.reveal-delay-3 { animation-delay: 0.36s; }
+
+@keyframes lumiere-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.float-slow {
+  animation: lumiere-float 6s ease-in-out infinite;
+}
+
+@keyframes lumiere-shimmer {
+  0% { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, #efeded 0%, #f5f3f3 50%, #efeded 100%);
+  background-size: 800px 100%;
+  animation: lumiere-shimmer 1.6s linear infinite;
+}
+
+.tilt-card {
+  perspective: 1200px;
+  transform-style: preserve-3d;
+}
+
+.tilt-card-inner {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.tilt-card:hover .tilt-card-inner {
+  transform: rotateX(2.5deg) rotateY(-3deg) translateZ(20px);
+}
+
+.tilt-card-img {
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateZ(0);
+}
+
+.tilt-card:hover .tilt-card-img {
+  transform: translateZ(40px) scale(1.06);
+}
+
+.parallax-slow {
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.parallax-slow:hover {
+  transform: scale(1.04);
+}
+
+@keyframes lumiere-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in {
+  animation: lumiere-fade-in 1.2s ease-out both;
+}
