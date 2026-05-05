@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="12" fill="#171818"/>
-  <text x="50%" y="50%" text-anchor="middle" dominant-baseline="central"
+  <rect width="64" height="64" rx="10" fill="#171818"/>
+  <text x="32" y="34" text-anchor="middle" dominant-baseline="middle"
         font-family="'Noto Serif', 'Times New Roman', Georgia, serif"
-        font-size="44" font-weight="600" fill="#fbf9f9"
-        letter-spacing="-1">L</text>
+        font-size="11" font-weight="600" fill="#fbf9f9"
+        letter-spacing="-0.4">LUMIÈRE</text>
 </svg>
