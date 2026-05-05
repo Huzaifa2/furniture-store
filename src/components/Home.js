@@ -155,7 +155,7 @@ const Home = () => {
       </section>
 
       {/* Page Links Section */}
-      <section className="max-w-7xl mx-auto px-8 py-section-gap">
+      {/* <section className="max-w-7xl mx-auto px-8 py-section-gap">
         <div className="mb-10 text-center">
           <span className="font-label-sm text-label-sm text-secondary uppercase tracking-widest mb-4 block">Explore the Site</span>
           <h2 className="font-headline-lg text-headline-lg">Jump to any page</h2>
@@ -186,7 +186,7 @@ const Home = () => {
             <p className="font-body-md text-on-surface-variant">Open the product detail page for the wooden dining table.</p>
           </Link>
         </div>
-      </section>
+      </section> */}
 
       {/* Testimonials Section */}
       <section className="bg-surface-container-high py-section-gap">
