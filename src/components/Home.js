@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SaleTicker from './SaleTicker';
 
 const HERO_IMG = 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=80';
 
@@ -62,8 +63,9 @@ const TESTIMONIAL_AVATARS = {
 const Home = () => {
   return (
     <div className="font-body-md text-body-md antialiased">
+      <SaleTicker />
       {/* Top Navigation Bar */}
-      <nav className="fixed top-0 w-full z-50 border-b border-stone-200/60 dark:border-zinc-800/60 bg-stone-50/95 dark:bg-zinc-950/95 backdrop-blur-sm shadow-[0_4px_20px_-5px_rgba(44,44,44,0.05)] transition-all duration-300 ease-in-out h-20">
+      <nav className="fixed top-9 w-full z-50 border-b border-stone-200/60 dark:border-zinc-800/60 bg-stone-50/95 dark:bg-zinc-950/95 backdrop-blur-sm shadow-[0_4px_20px_-5px_rgba(44,44,44,0.05)] transition-all duration-300 ease-in-out h-20">
         <div className="flex justify-between items-center max-w-7xl mx-auto px-8 h-full">
           <div className="text-2xl font-serif font-semibold tracking-tighter text-zinc-900 dark:text-zinc-50">LUMIÈRE</div>
           <div className="hidden md:flex items-center space-x-12 font-serif text-lg tracking-tight">
@@ -84,7 +86,7 @@ const Home = () => {
       </nav>
 
       {/* Hero Section */}
-      <header className="relative w-full h-[921px] overflow-hidden flex items-center pt-20">
+      <header className="relative w-full h-[921px] overflow-hidden flex items-center pt-[116px]">
         <div className="absolute inset-0 z-0">
           <img
             alt="Sun-drenched minimalist living room with sculptural oak dining table"

@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SaleTicker from '../components/SaleTicker';
 
 const CheckoutShippingInformation = () => (
   <div className="font-body-md text-body-md antialiased">
+    <SaleTicker />
     {/* TopNavBar */}
-    <header className="fixed top-0 w-full z-50 border-b border-stone-200/60 bg-stone-50/95 backdrop-blur-sm shadow-[0_4px_20px_-5px_rgba(44,44,44,0.05)]">
+    <header className="fixed top-9 w-full z-50 border-b border-stone-200/60 bg-stone-50/95 backdrop-blur-sm shadow-[0_4px_20px_-5px_rgba(44,44,44,0.05)]">
       <div className="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
         <div className="flex items-center gap-12">
           <Link className="text-2xl font-serif font-semibold tracking-tighter text-zinc-900" to="/">LUMIÈRE</Link>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SaleTicker from '../components/SaleTicker';
 
 const HERO_IMG = 'https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1800&q=80';
 const ATELIER_IMG = 'https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=1200&q=80';
@@ -53,8 +54,9 @@ const FOUNDERS = [
 
 const TimelessHearth = () => (
   <div className="min-h-screen bg-surface font-body-md text-on-surface antialiased">
+    <SaleTicker />
     {/* Top Nav */}
-    <header className="fixed top-0 w-full z-50 border-b border-stone-200/60 bg-stone-50/95 backdrop-blur-sm shadow-[0_4px_20px_-5px_rgba(44,44,44,0.05)]">
+    <header className="fixed top-9 w-full z-50 border-b border-stone-200/60 bg-stone-50/95 backdrop-blur-sm shadow-[0_4px_20px_-5px_rgba(44,44,44,0.05)]">
       <nav className="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
         <Link to="/" className="text-2xl font-serif font-semibold tracking-tighter text-zinc-900">LUMIÈRE</Link>
         <div className="hidden md:flex items-center space-x-12 font-serif text-lg tracking-tight">
@@ -75,7 +77,7 @@ const TimelessHearth = () => (
     </header>
 
     {/* Hero */}
-    <section className="relative w-full h-[680px] overflow-hidden flex items-end pt-20">
+    <section className="relative w-full h-[680px] overflow-hidden flex items-end pt-[116px]">
       <div className="absolute inset-0 z-0">
         <img src={HERO_IMG} alt="Lumière atelier in early morning light" className="w-full h-full object-cover parallax-slow fade-in" />
         <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/70 via-zinc-900/30 to-transparent"></div>

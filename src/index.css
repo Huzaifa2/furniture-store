@@ -104,3 +104,17 @@ html {
 .fade-in {
   animation: lumiere-fade-in 1.2s ease-out both;
 }
+
+@keyframes lumiere-ticker {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.ticker-track {
+  animation: lumiere-ticker 50s linear infinite;
+  width: max-content;
+}
+
+.ticker-track:hover {
+  animation-play-state: paused;
+}

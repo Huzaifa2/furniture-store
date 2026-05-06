@@ -1,5 +1,6 @@
 import React, { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
+import SaleTicker from '../components/SaleTicker';
 
 const ALL_PRODUCTS = [
   { title: 'Atelier Dining Table', price: 1850, category: 'Dining', material: 'Oak', color: 'Natural', desc: 'A foundational piece for the modern dining room, carved from sustainably sourced European White Oak.', img: 'https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=900&q=80' },
@@ -54,7 +55,8 @@ const BrowseOurCollection = () => {
 
   return (
     <div className="font-body-md text-on-surface">
-      <header className="fixed top-0 w-full z-50 border-b border-stone-200/60 bg-stone-50/95 backdrop-blur-sm shadow-[0_4px_20px_-5px_rgba(44,44,44,0.05)]">
+      <SaleTicker />
+      <header className="fixed top-9 w-full z-50 border-b border-stone-200/60 bg-stone-50/95 backdrop-blur-sm shadow-[0_4px_20px_-5px_rgba(44,44,44,0.05)]">
         <nav className="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
           <Link to="/" className="text-2xl font-serif font-semibold tracking-tighter text-zinc-900">LUMIÈRE</Link>
           <div className="hidden md:flex items-center space-x-12 font-serif text-lg tracking-tight">

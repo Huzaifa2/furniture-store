@@ -1,5 +1,6 @@
 import React, { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
+import SaleTicker from '../components/SaleTicker';
 
 const INITIAL_ITEMS = [
   {
@@ -50,7 +51,8 @@ const YourShoppingCart = () => {
 
   return (
     <div className="min-h-screen bg-surface">
-      <header className="fixed top-0 w-full z-50 border-b border-stone-200/60 bg-stone-50/95 backdrop-blur-sm shadow-[0_4px_20px_-5px_rgba(44,44,44,0.05)]">
+      <SaleTicker />
+      <header className="fixed top-9 w-full z-50 border-b border-stone-200/60 bg-stone-50/95 backdrop-blur-sm shadow-[0_4px_20px_-5px_rgba(44,44,44,0.05)]">
         <nav className="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
           <Link to="/" className="text-2xl font-serif font-semibold tracking-tighter text-zinc-900">LUMIÈRE</Link>
           <div className="hidden md:flex items-center space-x-12 font-serif text-lg tracking-tight">
