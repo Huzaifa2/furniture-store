@@ -101,25 +101,29 @@ const SaleTicker = () => {
   const messages = TICKER_BY_LANG[lang] || FALLBACK_MESSAGES;
 
   return (
-    <div className="fixed top-0 inset-x-0 z-[60] bg-primary text-on-primary h-9 border-b border-zinc-800/40 select-none">
-      <div className="relative w-full h-full overflow-hidden">
-        <div key={lang} className="ticker-track flex items-center h-full whitespace-nowrap pr-32">
-          {[...messages, ...messages].map((m, i) => (
-            <span
-              key={i}
-              className="font-label-sm uppercase tracking-widest text-[11px] px-8 flex items-center opacity-90"
-            >
+    <div className="fixed top-0 inset-x-0 z-[60] bg-primary text-on-primary border-b border-zinc-800/40 select-none">
+      <div className="relative h-9">
+        {/* Scrolling ticker (clipped, but only this strip) */}
+        <div className="absolute inset-y-0 left-0 right-32 overflow-hidden">
+          <div key={lang} className="ticker-track flex items-center h-full whitespace-nowrap">
+            {[...messages, ...messages].map((m, i) => (
               <span
-                className="material-symbols-outlined text-[14px] mr-3 opacity-70"
-                style={{ fontVariationSettings: "'FILL' 1" }}
+                key={i}
+                className="font-label-sm uppercase tracking-widest text-[11px] px-8 flex items-center opacity-90"
               >
-                auto_awesome
+                <span
+                  className="material-symbols-outlined text-[14px] mr-3 opacity-70"
+                  style={{ fontVariationSettings: "'FILL' 1" }}
+                >
+                  auto_awesome
+                </span>
+                {m}
               </span>
-              {m}
-            </span>
-          ))}
+            ))}
+          </div>
         </div>
-        <div className="absolute top-0 right-0 h-full bg-primary pl-6 pr-3 flex items-center shadow-[-12px_0_16px_-4px_rgba(23,24,24,0.9)]">
+        {/* Language switcher — outside the overflow-hidden zone so the dropdown can extend below */}
+        <div className="absolute top-0 right-0 h-9 bg-primary pl-6 pr-3 flex items-center shadow-[-12px_0_16px_-4px_rgba(23,24,24,0.95)]">
           <LanguageSwitcher />
         </div>
       </div>
