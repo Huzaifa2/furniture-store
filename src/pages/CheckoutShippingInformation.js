@@ -24,7 +24,7 @@ const CheckoutShippingInformation = () => {
           <Link to="/your-shopping-cart" className="text-zinc-800 hover:opacity-80 transition-opacity">
             <span className="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
           </Link>
-          <Link to="/checkout-shipping" className="text-zinc-800 hover:opacity-80 transition-opacity">
+          <Link to="/login" aria-label="Account" className="text-zinc-800 hover:opacity-80 transition-opacity">
             <span className="material-symbols-outlined" data-icon="person">person</span>
           </Link>
         </div>

@@ -71,7 +71,7 @@ const BrowseOurCollection = () => {
             <Link to="/your-shopping-cart" className="hover:opacity-80 transition-opacity duration-300">
               <span className="material-symbols-outlined text-zinc-800">shopping_bag</span>
             </Link>
-            <Link to="/checkout-shipping" className="hover:opacity-80 transition-opacity duration-300">
+            <Link to="/login" aria-label="Account" className="hover:opacity-80 transition-opacity duration-300">
               <span className="material-symbols-outlined text-zinc-800">person</span>
             </Link>
           </div>

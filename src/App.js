@@ -5,7 +5,9 @@ import { LanguageProvider } from './i18n/LanguageContext';
 import Home from './components/Home';
 import BrowseOurCollection from './pages/BrowseOurCollection';
 import CheckoutShippingInformation from './pages/CheckoutShippingInformation';
+import Login from './pages/Login';
 import SellerDashboardAddProduct from './pages/SellerDashboardAddProduct';
+import Signup from './pages/Signup';
 import TimelessHearth from './pages/TimelessHearth';
 import WoodenDiningTableDetails from './pages/WoodenDiningTableDetails';
 import YourShoppingCart from './pages/YourShoppingCart';
@@ -19,6 +21,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/browse-our-collection" element={<BrowseOurCollection />} />
           <Route path="/checkout-shipping" element={<CheckoutShippingInformation />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
           <Route path="/seller-dashboard" element={<SellerDashboardAddProduct />} />
           <Route path="/timeless-hearth" element={<TimelessHearth />} />
           <Route path="/wooden-dining-table-details" element={<WoodenDiningTableDetails />} />

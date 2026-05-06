@@ -98,7 +98,7 @@ const WoodenDiningTableDetails = () => {
             <Link to="/your-shopping-cart" aria-label="Cart" className="text-zinc-800 hover:text-primary hover:scale-110 transition-all duration-300">
               <span className="material-symbols-outlined">shopping_bag</span>
             </Link>
-            <Link to="/checkout-shipping" aria-label="Account" className="text-zinc-800 hover:text-primary hover:scale-110 transition-all duration-300">
+            <Link to="/login" aria-label="Account" className="text-zinc-800 hover:text-primary hover:scale-110 transition-all duration-300">
               <span className="material-symbols-outlined">person</span>
             </Link>
           </div>

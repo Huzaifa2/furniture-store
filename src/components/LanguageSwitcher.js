@@ -27,7 +27,11 @@ const LanguageSwitcher = () => {
       <button
         type="button"
         onClick={() => setOpen((o) => !o)}
-        className="flex items-center gap-1.5 px-2 py-1 rounded-md text-on-primary hover:bg-white/10 transition-colors text-[11px] uppercase tracking-widest"
+        className={`flex items-center gap-1.5 px-2.5 py-1 rounded-md text-on-primary text-[11px] uppercase tracking-widest border transition-all duration-200 ${
+          open
+            ? 'border-white/60 bg-white/10'
+            : 'border-white/30 hover:border-white/60 hover:bg-white/10'
+        }`}
         aria-haspopup="listbox"
         aria-expanded={open}
         aria-label="Change language"
@@ -40,7 +44,7 @@ const LanguageSwitcher = () => {
       {open && (
         <div
           role="listbox"
-          className="absolute right-0 top-full mt-2 w-72 max-h-96 overflow-y-auto bg-white text-on-surface rounded-2xl shadow-2xl shadow-zinc-900/30 border border-stone-200 py-2 z-[80] reveal"
+          className="absolute right-0 top-full mt-2 w-72 max-h-96 overflow-y-auto bg-white text-on-surface rounded-2xl shadow-2xl shadow-zinc-900/40 ring-1 ring-zinc-900/10 border border-stone-300 py-2 z-[80] reveal"
         >
           <div className="px-4 py-2 border-b border-stone-100 sticky top-0 bg-white">
             <span className="text-[10px] uppercase tracking-widest text-stone-400 font-semibold">Choose your language</span>
