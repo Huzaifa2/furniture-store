@@ -1,6 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import SaleTicker from '../components/SaleTicker';
+import { useLanguage } from '../i18n/LanguageContext';
 
 const INITIAL_ITEMS = [
   {
@@ -24,6 +25,7 @@ const INITIAL_ITEMS = [
 const formatPrice = (n) => `$${n.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
 
 const YourShoppingCart = () => {
+  const { t } = useLanguage();
   const [items, setItems] = useState(INITIAL_ITEMS);
   const [promo, setPromo] = useState('');
   const [appliedPromo, setAppliedPromo] = useState(null);
@@ -56,10 +58,10 @@ const YourShoppingCart = () => {
         <nav className="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
           <Link to="/" className="text-2xl font-serif font-semibold tracking-tighter text-zinc-900">LUMIÈRE</Link>
           <div className="hidden md:flex items-center space-x-12 font-serif text-lg tracking-tight">
-            <Link className="text-stone-500 hover:text-zinc-800 transition-opacity duration-300" to="/browse-our-collection">Living</Link>
-            <Link className="text-stone-500 hover:text-zinc-800 transition-opacity duration-300" to="/wooden-dining-table-details">Dining</Link>
-            <Link className="text-stone-500 hover:text-zinc-800 transition-opacity duration-300" to="/seller-dashboard">Office</Link>
-            <Link className="text-stone-500 hover:text-zinc-800 transition-opacity duration-300" to="/timeless-hearth">About</Link>
+            <Link className="text-stone-500 hover:text-zinc-800 transition-opacity duration-300" to="/browse-our-collection">{t('nav.living')}</Link>
+            <Link className="text-stone-500 hover:text-zinc-800 transition-opacity duration-300" to="/wooden-dining-table-details">{t('nav.dining')}</Link>
+            <Link className="text-stone-500 hover:text-zinc-800 transition-opacity duration-300" to="/seller-dashboard">{t('nav.office')}</Link>
+            <Link className="text-stone-500 hover:text-zinc-800 transition-opacity duration-300" to="/timeless-hearth">{t('nav.about')}</Link>
           </div>
           <div className="flex items-center space-x-6">
             <Link to="/your-shopping-cart" className="hover:opacity-80 transition-opacity duration-300">

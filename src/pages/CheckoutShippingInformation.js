@@ -1,8 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SaleTicker from '../components/SaleTicker';
+import { useLanguage } from '../i18n/LanguageContext';
 
-const CheckoutShippingInformation = () => (
+const CheckoutShippingInformation = () => {
+  const { t } = useLanguage();
+  return (
   <div className="font-body-md text-body-md antialiased">
     <SaleTicker />
     {/* TopNavBar */}
@@ -11,10 +14,10 @@ const CheckoutShippingInformation = () => (
         <div className="flex items-center gap-12">
           <Link className="text-2xl font-serif font-semibold tracking-tighter text-zinc-900" to="/">LUMIÈRE</Link>
           <nav className="hidden md:flex space-x-8 font-serif text-lg tracking-tight">
-            <Link className="text-stone-500 hover:text-zinc-800 transition-opacity duration-300" to="/browse-our-collection">Living</Link>
-            <Link className="text-stone-500 hover:text-zinc-800 transition-opacity duration-300" to="/wooden-dining-table-details">Dining</Link>
-            <Link className="text-stone-500 hover:text-zinc-800 transition-opacity duration-300" to="/seller-dashboard">Office</Link>
-            <Link className="text-stone-500 hover:text-zinc-800 transition-opacity duration-300" to="/timeless-hearth">About</Link>
+            <Link className="text-stone-500 hover:text-zinc-800 transition-opacity duration-300" to="/browse-our-collection">{t('nav.living')}</Link>
+            <Link className="text-stone-500 hover:text-zinc-800 transition-opacity duration-300" to="/wooden-dining-table-details">{t('nav.dining')}</Link>
+            <Link className="text-stone-500 hover:text-zinc-800 transition-opacity duration-300" to="/seller-dashboard">{t('nav.office')}</Link>
+            <Link className="text-stone-500 hover:text-zinc-800 transition-opacity duration-300" to="/timeless-hearth">{t('nav.about')}</Link>
           </nav>
         </div>
         <div className="flex items-center space-x-6">
@@ -163,6 +166,7 @@ const CheckoutShippingInformation = () => (
       </div>
     </footer>
   </div>
-);
+  );
+};
 
 export default CheckoutShippingInformation;

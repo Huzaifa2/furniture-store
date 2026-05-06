@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import SaleTicker from '../components/SaleTicker';
+import { useLanguage } from '../i18n/LanguageContext';
 
 const CATEGORIES = ['Living', 'Dining', 'Office', 'Décor'];
 const MATERIALS = ['Oak', 'Walnut', 'Stone', 'Leather', 'Cane', 'Linen'];
@@ -12,6 +13,7 @@ const formatPrice = (n) => {
 };
 
 const SellerDashboardAddProduct = () => {
+  const { t } = useLanguage();
   const [form, setForm] = useState({
     title: '',
     category: 'Living',
@@ -49,10 +51,10 @@ const SellerDashboardAddProduct = () => {
         <nav className="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
           <Link to="/" className="text-2xl font-serif font-semibold tracking-tighter text-zinc-900">LUMIÈRE</Link>
           <div className="hidden md:flex items-center space-x-12 font-serif text-lg tracking-tight">
-            <Link className="text-stone-500 hover:text-zinc-800 transition-opacity duration-300" to="/browse-our-collection">Living</Link>
-            <Link className="text-stone-500 hover:text-zinc-800 transition-opacity duration-300" to="/wooden-dining-table-details">Dining</Link>
-            <Link className="text-zinc-900 border-b-2 border-zinc-900 pb-1 hover:opacity-80 transition-opacity duration-300" to="/seller-dashboard">Office</Link>
-            <Link className="text-stone-500 hover:text-zinc-800 transition-opacity duration-300" to="/timeless-hearth">About</Link>
+            <Link className="text-stone-500 hover:text-zinc-800 transition-opacity duration-300" to="/browse-our-collection">{t('nav.living')}</Link>
+            <Link className="text-stone-500 hover:text-zinc-800 transition-opacity duration-300" to="/wooden-dining-table-details">{t('nav.dining')}</Link>
+            <Link className="text-zinc-900 border-b-2 border-zinc-900 pb-1 hover:opacity-80 transition-opacity duration-300" to="/seller-dashboard">{t('nav.office')}</Link>
+            <Link className="text-stone-500 hover:text-zinc-800 transition-opacity duration-300" to="/timeless-hearth">{t('nav.about')}</Link>
           </div>
           <div className="flex items-center space-x-6">
             <Link to="/your-shopping-cart" className="hover:opacity-80 transition-opacity duration-300">

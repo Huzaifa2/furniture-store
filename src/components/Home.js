@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SaleTicker from './SaleTicker';
+import { useLanguage } from '../i18n/LanguageContext';
 
 const HERO_IMG = 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=80';
 
@@ -61,6 +62,7 @@ const TESTIMONIAL_AVATARS = {
 };
 
 const Home = () => {
+  const { t } = useLanguage();
   return (
     <div className="font-body-md text-body-md antialiased">
       <SaleTicker />
@@ -69,10 +71,10 @@ const Home = () => {
         <div className="flex justify-between items-center max-w-7xl mx-auto px-8 h-full">
           <div className="text-2xl font-serif font-semibold tracking-tighter text-zinc-900 dark:text-zinc-50">LUMIÈRE</div>
           <div className="hidden md:flex items-center space-x-12 font-serif text-lg tracking-tight">
-            <Link className="text-zinc-900 dark:text-zinc-50 border-b-2 border-zinc-900 dark:border-zinc-50 pb-1 hover:opacity-80 transition-opacity duration-300" to="/browse-our-collection">Living</Link>
-            <Link className="text-stone-500 dark:text-stone-400 hover:text-zinc-800 dark:hover:text-zinc-200 hover:opacity-80 transition-opacity duration-300" to="/wooden-dining-table-details">Dining</Link>
-            <Link className="text-stone-500 dark:text-stone-400 hover:text-zinc-800 dark:hover:text-zinc-200 hover:opacity-80 transition-opacity duration-300" to="/seller-dashboard">Office</Link>
-            <Link className="text-stone-500 dark:text-stone-400 hover:text-zinc-800 dark:hover:text-zinc-200 hover:opacity-80 transition-opacity duration-300" to="/timeless-hearth">About</Link>
+            <Link className="text-zinc-900 dark:text-zinc-50 border-b-2 border-zinc-900 dark:border-zinc-50 pb-1 hover:opacity-80 transition-opacity duration-300" to="/browse-our-collection">{t('nav.living')}</Link>
+            <Link className="text-stone-500 dark:text-stone-400 hover:text-zinc-800 dark:hover:text-zinc-200 hover:opacity-80 transition-opacity duration-300" to="/wooden-dining-table-details">{t('nav.dining')}</Link>
+            <Link className="text-stone-500 dark:text-stone-400 hover:text-zinc-800 dark:hover:text-zinc-200 hover:opacity-80 transition-opacity duration-300" to="/seller-dashboard">{t('nav.office')}</Link>
+            <Link className="text-stone-500 dark:text-stone-400 hover:text-zinc-800 dark:hover:text-zinc-200 hover:opacity-80 transition-opacity duration-300" to="/timeless-hearth">{t('nav.about')}</Link>
           </div>
           <div className="flex items-center space-x-6 text-zinc-800 dark:text-zinc-200">
             <Link to="/your-shopping-cart" className="hover:opacity-80 transition-opacity duration-300">
@@ -97,17 +99,17 @@ const Home = () => {
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-8 w-full">
           <div className="max-w-2xl bg-surface/85 backdrop-blur-md p-12 rounded-2xl shadow-2xl shadow-zinc-900/10 reveal">
-            <span className="font-label-sm text-label-sm text-secondary uppercase tracking-widest mb-4 block">New Collection 2024</span>
-            <h1 className="font-display-xl text-display-xl text-primary mb-6">The Art of Living <br/>Permanently.</h1>
+            <span className="font-label-sm text-label-sm text-secondary uppercase tracking-widest mb-4 block">{t('hero.eyebrow')}</span>
+            <h1 className="font-display-xl text-display-xl text-primary mb-6">{t('hero.title.1')} <br/>{t('hero.title.2')}</h1>
             <p className="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-lg">
-              Discover furniture crafted for generations. We blend timeless design with modern durability to create spaces that feel like home.
+              {t('hero.subtitle')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/browse-our-collection" className="bg-primary text-on-primary px-10 py-4 rounded-xl font-body-md font-semibold hover:opacity-90 hover:-translate-y-0.5 transition-all duration-300 shadow-lg shadow-primary/20 text-center">
-                Shop Collection
+                {t('hero.cta.shop')}
               </Link>
               <Link to="/timeless-hearth" className="border border-outline text-primary px-10 py-4 rounded-xl font-body-md font-semibold hover:bg-surface-container hover:-translate-y-0.5 transition-all duration-300 text-center">
-                Explore Designs
+                {t('hero.cta.explore')}
               </Link>
             </div>
           </div>
@@ -152,7 +154,7 @@ const Home = () => {
             <span className="font-label-sm text-label-sm text-secondary uppercase tracking-widest mb-2 block">Shop by Room</span>
             <h2 className="font-headline-lg text-headline-lg">Featured Categories</h2>
           </div>
-          <Link to="/browse-our-collection" className="font-label-sm text-label-sm text-primary underline underline-offset-8 uppercase tracking-widest hover:text-secondary transition-colors hidden sm:inline">Browse All</Link>
+          <Link to="/browse-our-collection" className="font-label-sm text-label-sm text-primary underline underline-offset-8 uppercase tracking-widest hover:text-secondary transition-colors hidden sm:inline">{t('common.browse_all')}</Link>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter">
           {CATEGORIES.map((cat) => (
@@ -173,7 +175,7 @@ const Home = () => {
                   <span className="font-label-sm text-label-sm uppercase tracking-widest opacity-80 mb-1 block">{cat.tag}</span>
                   <h3 className="font-headline-lg text-headline-lg">{cat.name}</h3>
                   <span className="inline-flex items-center gap-2 mt-3 text-sm uppercase tracking-widest opacity-0 group-hover:opacity-100 -translate-y-1 group-hover:translate-y-0 transition-all duration-500">
-                    Discover <span className="material-symbols-outlined text-base">arrow_forward</span>
+                    {t('common.discover')} <span className="material-symbols-outlined text-base">arrow_forward</span>
                   </span>
                 </div>
               </div>
@@ -189,7 +191,7 @@ const Home = () => {
             <span className="font-label-sm text-label-sm text-secondary uppercase tracking-widest mb-2 block">Curated Selection</span>
             <h2 className="font-headline-lg text-headline-lg">Signature Pieces</h2>
           </div>
-          <Link to="/browse-our-collection" className="font-label-sm text-label-sm text-primary underline underline-offset-8 uppercase tracking-widest hover:text-secondary transition-colors">Explore All</Link>
+          <Link to="/browse-our-collection" className="font-label-sm text-label-sm text-primary underline underline-offset-8 uppercase tracking-widest hover:text-secondary transition-colors">{t('common.explore_all')}</Link>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-gutter">
           {FEATURED.map((p) => (

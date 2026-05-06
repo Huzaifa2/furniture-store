@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SaleTicker from '../components/SaleTicker';
+import { useLanguage } from '../i18n/LanguageContext';
 
 const HERO_IMG = 'https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1800&q=80';
 const ATELIER_IMG = 'https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=1200&q=80';
@@ -52,7 +53,9 @@ const FOUNDERS = [
   },
 ];
 
-const TimelessHearth = () => (
+const TimelessHearth = () => {
+  const { t } = useLanguage();
+  return (
   <div className="min-h-screen bg-surface font-body-md text-on-surface antialiased">
     <SaleTicker />
     {/* Top Nav */}
@@ -60,10 +63,10 @@ const TimelessHearth = () => (
       <nav className="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
         <Link to="/" className="text-2xl font-serif font-semibold tracking-tighter text-zinc-900">LUMIÈRE</Link>
         <div className="hidden md:flex items-center space-x-12 font-serif text-lg tracking-tight">
-          <Link className="text-stone-500 hover:text-zinc-800 transition-opacity duration-300" to="/browse-our-collection">Living</Link>
-          <Link className="text-stone-500 hover:text-zinc-800 transition-opacity duration-300" to="/wooden-dining-table-details">Dining</Link>
-          <Link className="text-stone-500 hover:text-zinc-800 transition-opacity duration-300" to="/seller-dashboard">Office</Link>
-          <Link className="text-zinc-900 border-b-2 border-zinc-900 pb-1 hover:opacity-80 transition-opacity duration-300" to="/timeless-hearth">About</Link>
+          <Link className="text-stone-500 hover:text-zinc-800 transition-opacity duration-300" to="/browse-our-collection">{t('nav.living')}</Link>
+          <Link className="text-stone-500 hover:text-zinc-800 transition-opacity duration-300" to="/wooden-dining-table-details">{t('nav.dining')}</Link>
+          <Link className="text-stone-500 hover:text-zinc-800 transition-opacity duration-300" to="/seller-dashboard">{t('nav.office')}</Link>
+          <Link className="text-zinc-900 border-b-2 border-zinc-900 pb-1 hover:opacity-80 transition-opacity duration-300" to="/timeless-hearth">{t('nav.about')}</Link>
         </div>
         <div className="flex items-center space-x-6">
           <Link to="/your-shopping-cart" className="hover:opacity-80 transition-opacity duration-300">
@@ -233,6 +236,7 @@ const TimelessHearth = () => (
       </div>
     </footer>
   </div>
-);
+  );
+};
 
 export default TimelessHearth;

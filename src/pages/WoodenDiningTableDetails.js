@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import SaleTicker from '../components/SaleTicker';
+import { useLanguage } from '../i18n/LanguageContext';
 
 const GALLERY = [
   {
@@ -52,6 +53,7 @@ const renderStars = (n) =>
 
 const WoodenDiningTableDetails = () => {
   const navigate = useNavigate();
+  const { t } = useLanguage();
   const [activeImage, setActiveImage] = useState(0);
   const [selectedMaterial, setSelectedMaterial] = useState('natural-oak');
   const [selectedDimension, setSelectedDimension] = useState('standard');
@@ -87,10 +89,10 @@ const WoodenDiningTableDetails = () => {
         <nav className="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
           <Link to="/" className="text-2xl font-serif font-semibold tracking-tighter text-zinc-900 hover:opacity-70 transition-opacity duration-300">LUMIÈRE</Link>
           <div className="hidden md:flex items-center space-x-12 font-serif text-lg tracking-tight">
-            <Link className="text-stone-500 hover:text-zinc-800 transition-colors duration-300" to="/browse-our-collection">Living</Link>
-            <Link className="text-zinc-900 border-b-2 border-zinc-900 pb-1 hover:opacity-80 transition-opacity duration-300" to="/wooden-dining-table-details">Dining</Link>
-            <Link className="text-stone-500 hover:text-zinc-800 transition-colors duration-300" to="/seller-dashboard">Office</Link>
-            <Link className="text-stone-500 hover:text-zinc-800 transition-colors duration-300" to="/timeless-hearth">About</Link>
+            <Link className="text-stone-500 hover:text-zinc-800 transition-colors duration-300" to="/browse-our-collection">{t('nav.living')}</Link>
+            <Link className="text-zinc-900 border-b-2 border-zinc-900 pb-1 hover:opacity-80 transition-opacity duration-300" to="/wooden-dining-table-details">{t('nav.dining')}</Link>
+            <Link className="text-stone-500 hover:text-zinc-800 transition-colors duration-300" to="/seller-dashboard">{t('nav.office')}</Link>
+            <Link className="text-stone-500 hover:text-zinc-800 transition-colors duration-300" to="/timeless-hearth">{t('nav.about')}</Link>
           </div>
           <div className="flex items-center space-x-6">
             <Link to="/your-shopping-cart" aria-label="Cart" className="text-zinc-800 hover:text-primary hover:scale-110 transition-all duration-300">
@@ -164,7 +166,7 @@ const WoodenDiningTableDetails = () => {
               <div className="space-y-8 mb-12">
                 {/* Material Selection */}
                 <div>
-                  <span className="font-label-sm text-label-sm uppercase mb-4 block">Select Material</span>
+                  <span className="font-label-sm text-label-sm uppercase mb-4 block">{t('product.select_material')}</span>
                   <div className="flex gap-4">
                     {[
                       { key: 'natural-oak', label: 'Natural Oak', swatch: '#D2B48C' },
@@ -189,7 +191,7 @@ const WoodenDiningTableDetails = () => {
 
                 {/* Dimensions Selection */}
                 <div>
-                  <span className="font-label-sm text-label-sm uppercase mb-4 block">Dimensions</span>
+                  <span className="font-label-sm text-label-sm uppercase mb-4 block">{t('product.dimensions')}</span>
                   <div className="grid grid-cols-2 gap-4">
                     {[
                       { key: 'standard', label: 'Standard', size: '220 × 100 cm' },
@@ -240,7 +242,7 @@ const WoodenDiningTableDetails = () => {
                   onClick={handleAddToCart}
                   className="flex-1 bg-primary text-on-primary font-label-sm uppercase tracking-widest py-4 rounded-xl shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300"
                 >
-                  Add to Cart
+                  {t('common.add_to_cart')}
                 </button>
               </div>
 
@@ -249,7 +251,7 @@ const WoodenDiningTableDetails = () => {
                 onClick={handleBuyNow}
                 className="w-full border border-stone-300 font-label-sm uppercase tracking-widest py-4 rounded-xl mb-12 hover:bg-primary hover:text-on-primary hover:border-primary hover:-translate-y-0.5 transition-all duration-300"
               >
-                Buy It Now
+                {t('common.buy_now')}
               </button>
 
               {/* Shipping Info */}
@@ -275,21 +277,21 @@ const WoodenDiningTableDetails = () => {
         <section className="mt-section-gap">
           <div className="border-b border-stone-200 flex gap-2 sm:gap-12 mb-12 overflow-x-auto">
             {[
-              { key: 'specs', label: 'Specifications' },
-              { key: 'reviews', label: `Reviews (${REVIEWS.length})` },
-              { key: 'care', label: 'Care Guide' },
-            ].map((t) => (
+              { key: 'specs', label: t('product.tab.specs') },
+              { key: 'reviews', label: `${t('product.tab.reviews')} (${REVIEWS.length})` },
+              { key: 'care', label: t('product.tab.care') },
+            ].map((tab) => (
               <button
-                key={t.key}
+                key={tab.key}
                 type="button"
-                onClick={() => setActiveTab(t.key)}
+                onClick={() => setActiveTab(tab.key)}
                 className={`pb-4 px-2 border-b-2 font-label-sm text-label-sm uppercase tracking-widest whitespace-nowrap transition-all duration-300 ${
-                  activeTab === t.key
+                  activeTab === tab.key
                     ? 'border-primary text-primary'
                     : 'border-transparent text-stone-400 hover:text-primary hover:border-stone-300'
                 }`}
               >
-                {t.label}
+                {tab.label}
               </button>
             ))}
           </div>
@@ -465,7 +467,7 @@ const WoodenDiningTableDetails = () => {
             onClick={handleAddToCart}
             className="bg-primary text-on-primary font-label-sm px-5 py-3 rounded-xl text-xs uppercase tracking-widest hover:opacity-90 active:scale-95 transition-all"
           >
-            Add to cart
+            {t('common.add_to_cart')}
           </button>
         </div>
       </div>
